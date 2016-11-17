@@ -1,6 +1,5 @@
 const express = require('express');
 const child_process = require('child_process');
-const conf = require('./conf.json');
 const app = express();
 
 app.post(`/${process.env.URL}`, (req, res) => {
