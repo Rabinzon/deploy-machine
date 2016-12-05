@@ -1,7 +1,12 @@
 ### Deploy machine
-This is a little helper script, that can execute command on machine from config by http request.
+This is a little helper script, that can execute command on machine from config by http post request.
+
+How to run:
+
+`PORT=3000 CONF=config.yaml npm start`
 
 Example config, yaml file:
+
 ```yaml
 -
     url: w3fG0dfpSsc0yDEd9DQgkwrpwhL
