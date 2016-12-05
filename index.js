@@ -1,10 +1,14 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
 const express = require('express');
+const process = require('process');
 const child_process = require('child_process');
 
+const {CONF, PORT} = process.env;
+
 const app = express();
-const file = fs.readFileSync(`${process.env.CONF}`, {encoding: 'utf-8'});
+
+const file = fs.readFileSync(`${CONF}`, {encoding: 'utf-8'});
 const config = yaml.load(file);
 
 config.forEach(item => {
@@ -14,4 +18,5 @@ config.forEach(item => {
 	});
 });
 
-app.listen(3314);
+app.listen(PORT);
+
